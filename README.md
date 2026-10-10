@@ -15,7 +15,9 @@ A fully autonomous, rule-based library management and inventory tracking system 
 ---
 
 ## 🌐 Live Demo
-- **Experience the App Live:** [View Streamlit App](https://your-streamlit-app-link.streamlit.app)
+- **Experience the App Live:** [View Streamlit App](https://alinazahrahub-library-agent-app-vzjeqt.streamlit.app/)
+
+- <img width="1919" height="905" alt="image" src="https://github.com/user-attachments/assets/d669e801-c30e-476d-a880-7ed4408e1849" />
 
 
 ## 🛠️ Tech Stack
