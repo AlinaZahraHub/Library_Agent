@@ -36,16 +36,14 @@ def init_database():
         )
     """)
     
-    # Check if members exist, if not insert default data
-    cursor.execute("SELECT COUNT(*) FROM members")
-    if cursor.fetchone()[0] == 0:
-        sample_members = [
-            ('M001', 'JOHN'),
-            ('M002', 'HANA'),
-            ('M002', 'ALEX'),
-            ('M003', 'CHARLIE')
-        ]
-        cursor.executemany("INSERT INTO members (member_id, name) VALUES (?, ?)", sample_members)
+    # Insert sample members safely without duplicate primary key conflicts
+    sample_members = [
+        ('M001', 'JOHN'),
+        ('M002', 'HANA'),
+        ('M003', 'ALEX'),
+        ('M004', 'CHARLIE')
+    ]
+    cursor.executemany("INSERT OR IGNORE INTO members (member_id, name) VALUES (?, ?)", sample_members)
         
     # Check if books exist, if not insert default data
     cursor.execute("SELECT COUNT(*) FROM books")
