@@ -40,9 +40,10 @@ def init_database():
     cursor.execute("SELECT COUNT(*) FROM members")
     if cursor.fetchone()[0] == 0:
         sample_members = [
-            ('M001', 'Alina Zahra'),
-            ('M002', 'Saniah Malik'),
-            ('M003', 'Javeria')
+            ('M001', 'JOHN'),
+            ('M002', 'HANA'),
+            ('M002', 'ALEX'),
+            ('M003', 'CHARLIE')
         ]
         cursor.executemany("INSERT INTO members (member_id, name) VALUES (?, ?)", sample_members)
         
